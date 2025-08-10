@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberJo | Autonomous ICT & Cybersecurity</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Orbitron for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for the futuristic theme */
+        body {
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .hero-bg {
+            background-color: #0a0a1a;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(13, 71, 161, 0.3), transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(0, 255, 255, 0.2), transparent 40%),
+                radial-gradient(circle at 50% 90%, rgba(76, 0, 130, 0.25), transparent 50%);
+            background-size: 100% 100%;
+        }
+        .glass-card {
+            background: rgba(16, 20, 42, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 255, 255, 0.1);
+            border-color: rgba(0, 255, 255, 0.3);
+        }
+        .glow-button {
+            background: #00c2c2;
+            box-shadow: 0 0 10px #00c2c2, 0 0 20px #00c2c2, 0 0 30px #00c2c2;
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
+            transform: scale(1.05);
+        }
+        .countdown-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-bold font-orbitron text-white">
+                CyberJo
+            </h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-300 hover:text-cyan-400 transition">Services</a>
+                <a href="#philosophy" class="text-gray-300 hover:text-cyan-400 transition">Philosophy</a>
+                <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="home" class="hero-bg pt-32 pb-20 md:pt-48 md:pb-32">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold font-orbitron uppercase tracking-wider text-white">
+                Integrating Intelligence.<br><span class="text-cyan-400">Automating Defence.</span>
+            </h2>
+            <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
+                CyberJo delivers unified ICT and Cybersecurity services, engineered for proactive, autonomous business operations. We are the future of digital resilience for South African enterprises.
+            </p>
+            
+            <!-- Countdown Timer -->
+            <div class="mt-12">
+                <h3 class="font-orbitron text-2xl text-cyan-400 mb-4">Launching In</h3>
+                <div id="countdown" class="flex justify-center space-x-2 md:space-x-4">
+                    <div class="countdown-box p-3 md:p-4 rounded-lg w-20 md:w-28 text-center">
+                        <span id="days" class="text-3xl md:text-5xl font-bold font-orbitron text-white">00</span>
+                        <span class="block text-xs md:text-sm text-cyan-300 mt-1">Days</span>
+                    </div>
+                    <div class="countdown-box p-3 md:p-4 rounded-lg w-20 md:w-28 text-center">
+                        <span id="hours" class="text-3xl md:text-5xl font-bold font-orbitron text-white">00</span>
+                        <span class="block text-xs md:text-sm text-cyan-300 mt-1">Hours</span>
+                    </div>
+                    <div class="countdown-box p-3 md:p-4 rounded-lg w-20 md:w-28 text-center">
+                        <span id="minutes" class="text-3xl md:text-5xl font-bold font-orbitron text-white">00</span>
+                        <span class="block text-xs md:text-sm text-cyan-300 mt-1">Minutes</span>
+                    </div>
+                    <div class="countdown-box p-3 md:p-4 rounded-lg w-20 md:w-28 text-center">
+                        <span id="seconds" class="text-3xl md:text-5xl font-bold font-orbitron text-white">00</span>
+                        <span class="block text-xs md:text-sm text-cyan-300 mt-1">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-28">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-orbitron text-white">Core Service Architecture</h2>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Our services are not siloed; they are integrated components of a single, intelligent system.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1 -->
+                <div class="glass-card p-8 rounded-xl text-center">
+                    <div class="text-5xl text-cyan-400 mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold font-orbitron text-white mb-2">Autonomous Security</h3>
+                    <p class="text-gray-300 text-sm">AI-driven threat detection, response, and neutralisation that operates 24/7, learning and adapting in real-time.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="glass-card p-8 rounded-xl text-center">
+                    <div class="text-5xl text-cyan-400 mb-4">⚖️</div>
+                    <h3 class="text-xl font-bold font-orbitron text-white mb-2">Unified Governance</h3>
+                    <p class="text-gray-300 text-sm">Seamless integration of compliance, risk, and management frameworks directly into your ICT infrastructure.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="glass-card p-8 rounded-xl text-center">
+                    <div class="text-5xl text-cyan-400 mb-4">🔮</div>
+                    <h3 class="text-xl font-bold font-orbitron text-white mb-2">Proactive Intelligence</h3>
+                    <p class="text-gray-300 text-sm">Predictive analytics to identify and mitigate potential vulnerabilities before they can be exploited.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="glass-card p-8 rounded-xl text-center">
+                    <div class="text-5xl text-cyan-400 mb-4">⚙️</div>
+                    <h3 class="text-xl font-bold font-orbitron text-white mb-2">Resilient Operations</h3>
+                    <p class="text-gray-300 text-sm">Self-healing networks and adaptive systems designed for maximum uptime and operational continuity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-20 md:py-28 bg-black bg-opacity-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold font-orbitron text-white">The Paradigm Shift</h2>
+                <p class="mt-6 text-gray-300">The era of reactive IT is over. Waiting for a system to fail or a breach to occur is a strategy for obsolescence. At CyberJo, we operate on a fundamentally different principle: proactive autonomy.</p>
+                <p class="mt-4 text-gray-300">We engineer your entire ICT and security ecosystem to be self-aware, self-governing, and self-defending. By integrating governance and management into the core of your operations, we eliminate the friction between security and productivity, creating a single, streamlined, and intelligent digital entity for your organisation.</p>
+            </div>
+            <div class="md:w-1/2">
+                <!-- Placeholder for a futuristic graphic or diagram -->
+                <div class="w-full h-64 md:h-80 glass-card rounded-xl flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 text-cyan-400 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2.25 2.25 0 003.072 0l-.529-1.12a2.25 2.25 0 01.363-2.433l.823-1.234a2.25 2.25 0 00-.363-3.134l-1.12-.529a2.25 2.25 0 01-2.433-.363l-1.234-.823a2.25 2.25 0 00-3.134.363l-.529 1.12a2.25 2.25 0 01-2.433.363l-1.234.823a2.25 2.25 0 00.363 3.134l1.12.529a2.25 2.25 0 01.363 2.433l.529 1.12a2.25 2.25 0 003.072 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.572 8.572a2.25 2.25 0 00-3.072 0l.529 1.12a2.25 2.25 0 01-.363 2.433l-.823 1.234a2.25 2.25 0 00.363 3.134l1.12.529a2.25 2.25 0 012.433.363l1.234.823a2.25 2.25 0 003.134-.363l.529-1.12a2.25 2.25 0 012.433-.363l1.234-.823a2.25 2.25 0 00-.363-3.134l-1.12-.529a2.25 2.25 0 01-.363-2.433L9.5 7.45a2.25 2.25 0 00-3.072 0z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold font-orbitron text-white">Connect With The Vanguard</h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Prepare your organisation for the future of digital operations. For pre-launch inquiries and strategic consultations, contact our security team.</p>
+            <div class="mt-12">
+                <a href="mailto:secure@cyberjo.co.za" class="inline-block text-white font-bold text-lg md:text-xl py-4 px-8 rounded-full glow-button font-orbitron">
+                    secure@cyberjo.co.za
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-cyan-400 border-opacity-20 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 CyberJo (Pty) Ltd. All rights reserved.</p>
+            <p class="text-sm mt-2">Based in South Africa, Securing the Future Globally.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer Logic
+        const countdownElement = document.getElementById('countdown');
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        // Set the launch date: 1 September 2025, 00:00:00 South Africa Standard Time (SAST, UTC+2)
+        const launchDate = new Date('2025-09-01T00:00:00+02:00').getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            if (distance < 0) {
+                countdownElement.innerHTML = `<h3 class="font-orbitron text-3xl text-cyan-400">Launched!</h3>`;
+                clearInterval(interval);
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysEl.textContent = String(days).padStart(2, '0');
+            hoursEl.textContent = String(hours).padStart(2, '0');
+            minutesEl.textContent = String(minutes).padStart(2, '0');
+            secondsEl.textContent = String(seconds).padStart(2, '0');
+        };
+
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.onscroll = () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-gray-900', 'bg-opacity-80', 'backdrop-blur-sm', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-gray-900', 'bg-opacity-80', 'backdrop-blur-sm', 'shadow-lg');
+            }
+        };
+    </script>
+
+</body>
+</html>
