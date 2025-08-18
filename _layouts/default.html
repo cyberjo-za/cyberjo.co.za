@@ -11,52 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-
-    <style>
-        /* Custom styles for the futuristic theme */
-        body {
-            background-color: #0a0a1a;
-            color: #e0e0e0;
-            font-family: 'Inter', sans-serif;
-        }
-        .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
-        }
-        .hero-bg {
-            background-color: #0a0a1a;
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(13, 71, 161, 0.3), transparent 40%),
-                radial-gradient(circle at 85% 30%, rgba(0, 255, 255, 0.2), transparent 40%),
-                radial-gradient(circle at 50% 90%, rgba(76, 0, 130, 0.25), transparent 50%);
-            background-size: 100% 100%;
-        }
-        .glass-card {
-            background: rgba(16, 20, 42, 0.5);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 255, 255, 0.15);
-            transition: all 0.3s ease;
-        }
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 255, 255, 0.1);
-            border-color: rgba(0, 255, 255, 0.3);
-        }
-        .glow-button {
-            background: #00c2c2;
-            box-shadow: 0 0 10px #00c2c2, 0 0 20px #00c2c2, 0 0 30px #00c2c2;
-            transition: all 0.3s ease;
-        }
-        .glow-button:hover {
-            box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
-            transform: scale(1.05);
-        }
-        .countdown-box {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body class="antialiased">
     {% include header.html %}
@@ -65,7 +20,7 @@
 
     {% include footer.html %}
 
-    <script src="{{ '/js/scripts.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     
 </body>
 </html>
