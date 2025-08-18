@@ -1,0 +1,24 @@
+# Site settings
+title: CyberJo
+description: "A South African company that provides ICT and Cybersecurity management and support services."
+author: CyberJo (Pty) Ltd
+
+# URL settings
+baseurl: "" # The base directory of your site. It is empty because you are using a custom domain.
+url: "https://www.cyberjo.co.za" # The domain of your live site.
+
+# Build settings
+markdown: kramdown
+theme: null # This is null because you are using your own custom theme/files
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
